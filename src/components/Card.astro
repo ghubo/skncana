@@ -6,8 +6,8 @@ interface Props {
 const { title} = Astro.props;
 ---
 
-<div>
-	<h2 class="flex items-center text-lg after:flex-1 after:h-px after:ml-4 after:bg-black">{ title }</h2>
+<div class="grid gap-1">
+	<h2 class="flex items-center text-lg after:h-px after:ml-4 after:bg-black after:animate-[line_both_1s]">{ title }</h2>
 	<ul class="grid gap-1 ml-1">
 		<slot/>
 	</ul>

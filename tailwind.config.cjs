@@ -9,6 +9,13 @@ module.exports = {
 				'10%, 30%': { transform: 'rotate(14deg)' },
 				'20%': { transform: 'rotate(-8deg)' },
 				'40%': { transform: 'rotate(-4deg)' }
+			  },
+			  line: {
+				'0%': { flex : '0' },
+				'100%': { flex : '1' }
+			  },
+			  dash: {
+				to: { strokeDashoffset: 0 }
 			  }
 			}
 		},
