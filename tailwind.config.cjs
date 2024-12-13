@@ -16,9 +16,11 @@ module.exports = {
 			  },
 			  dash: {
 				to: { strokeDashoffset: 0 }
-			  }
+			  },
 			}
 		},
 	},
-	plugins: [],
+	plugins: [
+		require('tailwind-scrollbar')
+	],
 }
