@@ -1,14 +1,54 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
 import Card from '../components/Card.astro';
+import Steam from '../svg/steam-svgrepo-com.svg';
+import Xbox from '../svg/xbox-svgrepo-com.svg';
+import PS from '../svg/playstation-svgrepo-com.svg';
+import GOG from '../svg/gog-dot-com-svgrepo-com.svg';
+import Epic from '../svg/epicgames-svgrepo-com.svg';
+import Ubisoft from '../svg/ubisoft-svgrepo-com.svg';
+import EA from '../svg/ea-svgrepo-com.svg';
+import Battle from '../svg/battlenet-svgrepo-com.svg';
+import GPG from '../svg/Google_Play_Games_(2022,_icon).svg';
 ---
 
 <Layout title="Pengguna | SKP">
-	<header class="h-32 grid place-content-center self-center">
+	<header class="grid place-content-center justify-items-center gap-3 py-6">
 		<h1 class="text-4xl">Halo. <span class="animate-[2.5s_waving_1s] origin-[75%_75%] inline-block">👋</span></h1>
+		<p>Namaku Surya, Salam Kenal.</p>
 	</header>
 	<main class="grid content-start gap-4">
-		<Card title="Profil Sosial">
+		<Header title="Profil Game">
+			<Card username="stoeampo" share='https://steamcommunity.com/id/stoeampo/'>
+				<Steam slot="before" size={24} />
+			</Card>
+			<Card username="xaerag" share='https://www.xbox.com/play/user/xaerag'>
+				<Xbox slot="before" size={24} />
+			</Card>
+			<Card username="Snyment">
+				<PS slot="before" size={24} />
+			</Card>
+			<Card username="wgoom" share='https://www.gog.com/u/wgoom'>
+				<GOG slot="before" size={24} />
+			</Card>
+			<Card username="eicaes">
+				<Epic slot="before" size={24} />
+			</Card>
+			<Card username="Unnect">
+				<Ubisoft slot="before" size={24} />
+			</Card>
+			<Card username="eltrona">
+				<EA slot="before" size={24} />
+			</Card>
+			<Card username="Batnet#21157">
+				<Battle slot="before" size={24} />
+			</Card>
+			<Card username="Glyaes">
+				<GPG slot="before" size={24} />
+			</Card>
+		</Header>
+		<Header title="Profil Sosial">
 			<li><a href="https://www.instagram.com/skpengguna" class="flex gap-1">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
 					<path stroke-linecap="round" d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25" style="stroke-dasharray: 58; stroke-dashoffset: 58" class="animate-[dash_both_1s]" />
@@ -29,12 +69,12 @@ import Card from '../components/Card.astro';
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" style="stroke-dasharray: 44; stroke-dashoffset: 44" class="animate-[dash_both_1s_0.3s]" />
 				</svg>Gmail (BI-FAST)</a></li>
-		</Card>
-		<Card title="Profil Mahasiswa">
+		</Header>
+		<Header title="Profil Mahasiswa">
 			<li><a href="mailto:surya_4131230315@pknstan.ac.id" class="flex gap-1">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" style="stroke-dasharray: 44; stroke-dashoffset: 44" class="animate-[dash_both_1s]" />
 				</svg>Pos-el PKN STAN</a></li>
-		</Card>
+		</Header>
 	</main>
 </Layout>

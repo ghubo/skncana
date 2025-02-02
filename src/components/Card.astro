@@ -1,14 +1,20 @@
 ---
 interface Props {
-	title: string;
+	username: string;
+	share?: string;
 }
 
-const { title } = Astro.props;
----
+const { username, share } = Astro.props;
 
-<div class="grid gap-1">
-	<h2 class="flex items-center text-lg after:h-px after:ml-4 after:bg-black after:animate-[line_both_1s]">{ title }</h2>
-	<ul class="grid gap-1 ml-1">
-		<slot/>
-	</ul>
-</div>
+import Share from '../svg/share-04-svgrepo-com.svg'
+import Copy from '../svg/copy-06-svgrepo-com.svg'
+---
+<a href={share ? share : "#"} onclick={share ? '' : `navigator.clipboard.writeText('${username}')`}>
+	<div class="flex gap-4 items-center p-4 border border-gray-300 rounded-lg shadow-md bg-white">
+		<slot name="before" />
+		<div class="flex-1">
+			<p class="font-medium">{username}</p>
+		</div>
+		{share ? <Share slot="after" size={24} /> : <Copy slot="after" size={24} />}
+	</div>
+</a>

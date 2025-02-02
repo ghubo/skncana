@@ -1,0 +1,14 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="grid gap-1">
+	<h2 class="flex items-center text-lg after:h-px after:ml-4 after:bg-black after:animate-[line_both_1s]">{ title }</h2>
+	<ul class="grid sm:grid-cols-2 md:grid-cols-3 gap-2">
+		<slot />
+	</ul>
+</div>
