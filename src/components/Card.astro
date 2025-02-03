@@ -10,8 +10,8 @@ const { username, share, delay } = Astro.props;
 import Share from '../svg/share-04-svgrepo-com.svg'
 import Copy from '../svg/copy-06-svgrepo-com.svg'
 ---
-<li>
-	<a href={share ? share : "#"} target={share ? "_blank" : "_self"} onclick={share ? '' : `navigator.clipboard.writeText('${username}')`} class=`animate-[fade_both_1s]` style=`animation-delay: ${delay + 's'};`>
+<li class=`animate-[fade_both_1s]` style=`animation-delay: ${delay + 's'};`>
+	<a href={share ? share : "#"} target={share ? "_blank" : "_self"} onclick={share ? '' : `navigator.clipboard.writeText('${username}')`}>
 		<div class="flex gap-4 items-center p-4 border border-gray-300 rounded-lg shadow-md bg-white">
 			<slot name="before" />
 			<div class="flex-1">
