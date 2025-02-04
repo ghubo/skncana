@@ -41,3 +41,7 @@
         transform: scale(1);
     }
 }
+
+@theme {
+    --topography: url('../svg/topography.svg');
+}
