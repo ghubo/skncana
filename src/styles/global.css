@@ -44,4 +44,5 @@
 
 @theme {
     --topography: url('../svg/topography.svg');
+    --circuit-board: url('../svg/circuit-board.svg');
 }
