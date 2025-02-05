@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+@theme {
+    /* --animate-rotate: rotate 4s linear infinite; */
+
+    --topography: url('../svg/topography.svg');
+    --circuit-board: url('../svg/circuit-board.svg');
+
+    @keyframes rotate {
+        to {
+            --border-angle: 360deg;
+        }  
+    }    
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
 @keyframes waving {
     0%, 60%, 100% {
         transform: rotate(0deg);
@@ -40,9 +59,4 @@
         opacity: 1;
         transform: scale(1);
     }
-}
-
-@theme {
-    --topography: url('../svg/topography.svg');
-    --circuit-board: url('../svg/circuit-board.svg');
 }
