@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    /* --animate-rotate: rotate 4s linear infinite; */
+    --animate-rotate: rotate 4s linear infinite;
 
     --topography: url('../svg/topography.svg');
     --circuit-board: url('../svg/circuit-board.svg');
