@@ -12,7 +12,7 @@ import Copy from '../svg/copy-03-svgrepo-com.svg'
 ---
 <li class=`animate-[fade_both_1s]` style=`animation-delay: ${delay + 's'};`>
 	<a href={external ? external : "#"} target={external ? "_blank" : "_self"} onclick={external ? '' : `navigator.clipboard.writeText('${username}')`}>
-		<div class="flex gap-4 items-center p-4 rounded-lg shadow-md border-1 border-transparent [background:linear-gradient(rgba(255,255,255,1),rgba(255,255,255,1))_padding-box,conic-gradient(from_var(--border-angle),var(--color-black)_0%,var(--color-neutral-300)_40%_60%,var(--color-black)_100%)_border-box] animate-rotate">
+		<div class="flex gap-4 items-center p-4 rounded-lg shadow-md border-1 border-transparent [background:linear-gradient(rgba(255,255,255,1),rgba(255,255,255,1))_padding-box,conic-gradient(from_var(--border-angle),var(--color-black)_0%_25%,var(--color-neutral-300)_30%_70%,var(--color-black)_75%_100%)_border-box] animate-rotate hover:[animation-duration:1s]" style=`animation-delay: ${delay + delay + delay + 's'};`>
 			<slot name="before" />
 			<div class="flex-1">
 				<p class="font-medium">{username}</p>
