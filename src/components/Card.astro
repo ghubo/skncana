@@ -19,7 +19,7 @@ import Copy from "../svg/copy-03-svgrepo-com.svg";
   >
     <div
       class="animate-rotate flex items-center gap-4 rounded-lg border-1 border-transparent p-4 shadow-md [background:linear-gradient(rgba(255,255,255,1),rgba(255,255,255,1))_padding-box,conic-gradient(from_var(--border-angle),var(--color-black)_0%_25%,var(--color-neutral-300)_30%_70%,var(--color-black)_75%_100%)_border-box] hover:[animation-duration:1s]"
-      style=`animation-delay: ${delay + delay + delay + 's'};`
+      style=`animation-delay: ${ -Math.round((delay + delay + delay)*10)/10 + 's'};`
     >
       <slot name="before" />
       <div class="flex-1">
