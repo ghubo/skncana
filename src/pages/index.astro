@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
+import Section from "../components/Section.astro";
 import Card from "../components/Card.astro";
 import Steam from "../svg/steam-svgrepo-com.svg";
 import Xbox from "../svg/xbox-svgrepo-com.svg";
@@ -24,7 +24,7 @@ import RG from "../svg/rockstargames.svg";
     <p>Namaku Surya, Salam Kenal.</p>
   </header>
   <main class="grid content-start gap-4">
-    <Header title="Profil Game">
+    <Section title="Profil Game">
       <Card
         username="stoeampo"
         external="https://steamcommunity.com/id/stoeampo/"
@@ -67,8 +67,8 @@ import RG from "../svg/rockstargames.svg";
       <Card username="Glyaes" delay={0.9}>
         <GPG slot="before" width={24} height={24} />
       </Card>
-    </Header>
-    <Header title="Profil Sosial">
+    </Section>
+    <Section title="Profil Sosial">
       <li>
         <a href="https://www.instagram.com/skncana" class="flex gap-1">
           <svg
@@ -160,8 +160,8 @@ import RG from "../svg/rockstargames.svg";
           </svg>Pos-el</a
         >
       </li>
-    </Header>
-    <Header title="Profil Mahasiswa">
+    </Section>
+    <Section title="Profil Mahasiswa">
       <li>
         <a href="mailto:surya_4131230315@pknstan.ac.id" class="flex gap-1">
           <svg
@@ -181,6 +181,6 @@ import RG from "../svg/rockstargames.svg";
           </svg>Pos-el PKN STAN</a
         >
       </li>
-    </Header>
+    </Section>
   </main>
 </Layout>
