@@ -1,0 +1,41 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header>
+  <ul class="flex gap-6 py-4">
+    <li class="grow basis-0 text-right">
+      <a
+        href="/blogs"
+        class={currentPath === "/blogs"
+          ? "scale-110 font-bold opacity-100"
+          : "scale-100 font-medium opacity-60"}
+        style="display: inline-block;"
+      >
+        Blogs
+      </a>
+    </li>
+    <li>
+      <a
+        href="/"
+        class={currentPath === "/"
+          ? "scale-110 font-bold opacity-100"
+          : "scale-100 font-medium opacity-60"}
+        style="display: inline-block;"
+      >
+        Links
+      </a>
+    </li>
+    <li class="grow basis-0">
+      <a
+        href="/me"
+        class={currentPath === "/me"
+          ? "scale-110 font-bold opacity-100"
+          : "scale-100 font-medium opacity-60"}
+        style="display: inline-block;"
+      >
+        Profile
+      </a>
+    </li>
+  </ul>
+</header>
