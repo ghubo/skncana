@@ -1,5 +1,5 @@
 ---
-const currentPath = Astro.url.pathname;
+let currentPath = Astro.url.pathname;
 ---
 
 <header>
@@ -7,7 +7,7 @@ const currentPath = Astro.url.pathname;
     <li class="grow basis-0 text-right">
       <a
         href="/blogs"
-        class={currentPath === "/blogs"
+        class={currentPath.startsWith("/blogs")
           ? "scale-110 font-bold opacity-100"
           : "scale-100 font-medium opacity-60"}
         style="display: inline-block;"
@@ -29,7 +29,7 @@ const currentPath = Astro.url.pathname;
     <li class="grow basis-0">
       <a
         href="/me"
-        class={currentPath === "/me"
+        class={currentPath.startsWith("/me")
           ? "scale-110 font-bold opacity-100"
           : "scale-100 font-medium opacity-60"}
         style="display: inline-block;"
