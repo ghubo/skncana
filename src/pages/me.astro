@@ -1,13 +1,13 @@
 ---
 import { Picture } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import profilePhoto from "../images/profile.jpg";
+import profilePhoto from "../images/profile.webp";
 ---
 
 <Layout title="About Me | SKP">
-  <main class="grid place-content-center justify-items-center gap-3 py-6">
+  <main class="grid place-content-center">
     <section
-      class="relative w-full max-w-md rounded-2xl bg-white px-8 pt-16 pb-8 text-center shadow-lg"
+      class="relative max-w-md rounded-xl bg-white px-8 pt-16 pb-8 text-center shadow-lg"
     >
       <Picture
         src={profilePhoto}
