@@ -7,8 +7,7 @@ interface Props {
 
 const { username, external, delay } = Astro.props;
 
-import External from "../svg/link-external-01-svgrepo-com.svg";
-import Copy from "../svg/copy-03-svgrepo-com.svg";
+import { ExternalLink, Copy } from "@lucide/astro";
 ---
 
 <li
@@ -28,13 +27,7 @@ import Copy from "../svg/copy-03-svgrepo-com.svg";
       <div class="flex-1">
         <p class="font-medium">{username}</p>
       </div>
-      {
-        external ? (
-          <External slot="after" width={24} height={24} />
-        ) : (
-          <Copy slot="after" width={24} height={24} />
-        )
-      }
+      {external ? <ExternalLink size={24} /> : <Copy size={24} />}
     </div>
   </a>
 </li>
