@@ -11,9 +11,12 @@ import External from "../svg/link-external-01-svgrepo-com.svg";
 import Copy from "../svg/copy-03-svgrepo-com.svg";
 ---
 
-<li class=`animate-[fade_both_1s]` style=`animation-delay: ${delay + 's'};`>
+<li
+  class=`animate-[fade_both_1s] cursor-pointer`
+  style=`animation-delay: ${delay + 's'};`
+>
   <a
-    href={external ? external : "#"}
+    href={external}
     target={external ? "_blank" : "_self"}
     onclick={external ? "" : `navigator.clipboard.writeText('${username}')`}
   >
